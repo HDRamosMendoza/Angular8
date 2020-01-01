@@ -28,7 +28,41 @@ cd hola-mundo
 
 -> Dentro del proyecto en CMD digitamos: code .
 -> Para correr el aplicativo: ng serve
+    Al mostrar el aplicativo tambien te muestra cual es el puerto de salida.
 
+** Crear un componente desde 0. Opcion A.
+    Dentro de App.
+    1. Creamos "cursos.component.ts"
+        import { Component } from '@angular/core';
+        @Component({
+            selector: 'cursos',
+            template: `
+                <h1>Mis cursos</h1>
+                <p>TypeScript</p>
+            `,
+            styles: ['h1 { color: red;}']
+        })
+        export class CursosComponent {
+            mensaje = 'Curso de Angular';
+        }
+        
+    2. Registrar el "Component"
+        En app.module.ts
+        import { CursosComponent } from './cursos.component';
+        @NgModule({
+            declarations: [
+                AppComponent,
+                CursosComponent
+            ]
+        })
 
+    3. Para utilizar 
+        En app.component.html
+        {{mensaje}}
+        <cursos></cursos>
+
+** Crear un componente desde 0. Opcion B.
+
+Nota: Decorador, componente.
 
 Fuente: https://www.youtube.com/watch?v=7yGHRoLkI30&list=PLK7sa90aSLe7RW_7qotGlmBxMtm-jajCG
