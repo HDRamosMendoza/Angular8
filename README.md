@@ -32,6 +32,7 @@ cd hola-mundo
 
 ** Crear un componente desde 0. Opcion A.
     Dentro de App.
+    
     1. Creamos "cursos.component.ts"
         import { Component } from '@angular/core';
         @Component({
